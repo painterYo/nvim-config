@@ -1,0 +1,7 @@
+require "user.settings.options"
+require "user.settings.keymaps"
+require "user.plugins.plugins"
+require "user.settings.colorscheme"
+require "user.settings.cmp"
+require "user.plugins.telescope"
+-- require "user.plugins.treesitter"
