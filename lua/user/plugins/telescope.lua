@@ -1,11 +1,13 @@
 local status_ok, telescope = pcall(require, "telescope")
 if not status_ok then
+    vim.notify("Error: telescope not loaded.")
   return
 end
 
 local actions = require "telescope.actions"
 
 telescope.setup {
+
   defaults = {
 
     prompt_prefix = " ",
@@ -13,6 +15,8 @@ telescope.setup {
     path_display = { "smart" },
 
     mappings = {
+
+-- Insert Mode
       i = {
         ["<C-n>"] = actions.cycle_history_next,
         ["<C-p>"] = actions.cycle_history_prev,
@@ -41,9 +45,10 @@ telescope.setup {
         ["<C-q>"] = actions.send_to_qflist + actions.open_qflist,
         ["<M-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
         ["<C-l>"] = actions.complete_tag,
-        ["<C-_>"] = actions.which_key, -- keys from pressing <C-/>
+        ["<C-_>"] = actions.which_key, -- <C-/>
       },
 
+-- Normal Mode
       n = {
         ["<esc>"] = actions.close,
         ["<CR>"] = actions.select_default,
@@ -88,15 +93,14 @@ telescope.setup {
   -- },
   extensions = {
 --    media_files = {
-        -- filetypes whitelist
+        -- Filetypes whitelist
         -- defaults to {"png", "jpg", "mp4", "webm", "pdf"}
 --       filetypes = {"png", "webp", "jpg", "jpeg"},
 --        find_cmd = "rg"         -- find command (defaults to `fd`)
 --      }
-    -- Your extension configuration goes here:
+    -- Extension configuration goes here:
     -- extension_name = {
     --   extension_config_key = value,
     --}
-    -- please take a look at the readme of the extension you want to configure
   },
 }
