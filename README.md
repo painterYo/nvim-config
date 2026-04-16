@@ -1,6 +1,6 @@
 # 🚀 Neovim configuration
 
-Based on **Lua**
+A configuration for [NeoVim](https://neovim.io/) editor based on **Lua**. 
 
 ## 🛠️ Plugins
 
@@ -10,3 +10,7 @@ Based on **Lua**
 - **✅Auto-completion:** [nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
 - **📂Explorer:** [nvim-tree](https://github.com/nvim-tree/nvim-tree.lua)
 - **LSP Support:** -- TODO
+<br>
+<br>
+
+#### **Insipred by:** [LunarVim](https://github.com/LunarVim/Neovim-from-scratch). 
